@@ -1,20 +1,19 @@
-/* Database schema to keep the structure of entire database.*/
+-- Table: public.animals
 
--- Table: animals.animals
+-- DROP TABLE IF EXISTS public.animals;
 
--- DROP TABLE IF EXISTS animals.animals;
-
-CREATE TABLE IF NOT EXISTS animals.animals
+CREATE TABLE IF NOT EXISTS public.animals
 (
-    id integer,
+    id integer NOT NULL,
     name text COLLATE pg_catalog."default",
     date_of_birth date,
     escape_attempts integer,
     neutered boolean,
-    weight_kg point
+    weight_kg point,
+    CONSTRAINT animals_pkey PRIMARY KEY (id)
 )
 
 TABLESPACE pg_default;
 
-ALTER TABLE IF EXISTS animals.animals
+ALTER TABLE IF EXISTS public.animals
     OWNER to postgres;
