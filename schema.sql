@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS public.animals
     date_of_birth date,
     escape_attempts integer,
     neutered boolean,
-    weight_kg point,
+    weight_kg numeric,
     CONSTRAINT animals_pkey PRIMARY KEY (id)
 )
 
