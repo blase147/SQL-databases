@@ -51,7 +51,15 @@ ADD owner_id
 
 COMMIT;
 
+-- Create a table named vets
+BEGIN;
 
+CREATE TABLE animals.vets (
+    id serial PRIMARY KEY,
+    name text,
+    age integer,
+    date_of_graduation date
+);
 
 
 
