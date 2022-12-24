@@ -87,10 +87,10 @@ WHERE name IN ('Angemon', 'Boamon');
 COMMIT;
 
 -- insert records into vets table
-INSERT INTO vets(name, age, date_of_graduation) VALUES('William Tatcher',45,'23/04/2000');
-INSERT INTO vets(name, age, date_of_graduation) VALUES('Maisy Smith',26,'17/07/2019');
-INSERT INTO vets(name, age, date_of_graduation) VALUES('Stephanie Mendez',64,'04/05/1981');
-INSERT INTO vets(name, age, date_of_graduation) VALUES('Jack Harkness',38,'08/07/2008');
+INSERT INTO vets(name, age, date_of_graduation) VALUES('William Tatcher',45,'2000-04-23');
+INSERT INTO vets(name, age, date_of_graduation) VALUES('Maisy Smith',26,'2019-01-17');
+INSERT INTO vets(name, age, date_of_graduation) VALUES('Stephanie Mendez',64,'1981-04-05');
+INSERT INTO vets(name, age, date_of_graduation) VALUES('Jack Harkness',38,'2008-06-08');
 
 -- insert records into specialization table based on conditions
 INSERT INTO specializations(vets_id, species_id) VALUES(

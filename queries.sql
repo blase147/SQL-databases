@@ -192,7 +192,7 @@ LEFT JOIN species S ON SP.species_id = S.id
 SELECT A.name FROM animals A
 JOIN visits V ON A.id = V.animals_id
 JOIN vets VT ON V.vets_id = VT.id
-WHERE V.visit_date BETWEEN  '01/04/2020' AND '30/08/2020'
+WHERE V.visit_date BETWEEN '2020-04-01' AND '2020-08-30'
 GROUP BY (A.name);
 
 -- What animal has the most visits to vets?
