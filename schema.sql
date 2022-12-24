@@ -61,7 +61,17 @@ CREATE TABLE animals.vets (
     date_of_graduation date
 );
 
+-- many-many relationship: create table to connects two table together
+CREATE TABLE specializations(
+    species_id INT REFERENCES species(id) ON DELETE CASCADE,
+    vets_id INT REFERENCES vets(id) ON DELETE CASCADE
+);
 
+CREATE TABLE visits(
+    animals_id INT REFERENCES animals(id) ON DELETE CASCADE,
+    vets_id INT REFERENCES vets(id) ON DELETE CASCADE,
+    visit_date DATE
+);
 
 
 
