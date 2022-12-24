@@ -1,6 +1,4 @@
 /*Queries that provide answers to the questions from all projects.*/
-
-/*Queries that provide answers to the questions from all projects.*/
 /*updating species column*/
 BEGIN;
 UPDATE animals.animals
@@ -72,16 +70,14 @@ WHERE EXTRACT(YEAR FROM date_of_birth) BETWEEN '1990' AND '2000'
 GROUP BY(species) ORDER BY average;
 
 -- query questions: join multiple tables
-BEGIN;
-
 SELECT A.name,A.date_of_birth, A.escape_attempts, A.neutered, A.weight_kg
 FROM animals.animals  A 
 JOIN owners OW ON A.owner_id = OW.id
 WHERE OW.full_name = 'Melody Pond';
 
-SELECT A.name, A.date_of_birth, A.escape_attempts, A.neutered, A.weight_kg
+SELECT A.name,A.date_of_birth, A.escape_attempts, A.neutered, A.weight_kg
 FROM animals.animals  A 
-JOIN animals.species S ON A.species_id = S.id
+JOIN species S ON A.species_id = S.id
 WHERE S.name = 'Pokemon';
 
 SELECT OW.full_name , A.name FROM animals.animals  A 
